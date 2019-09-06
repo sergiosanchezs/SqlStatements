@@ -1,0 +1,31 @@
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('1', 'Smith', 'John');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('2', 'Rojas', 'Andres');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('3', 'Sahib', 'Sahib');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('4', 'Sanchez', 'Sergio');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('5', 'Uribe', 'Carlos');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('6', 'Martinez', 'Saul');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('7', 'Ballester', 'Jorge');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('8', 'Silva', 'Carlos');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('9', 'Morales', 'Ruben');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname)
+VALUES ('10', 'Rojas', 'Camilo');
+
+SELECT * FROM students;
