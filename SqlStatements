@@ -59,27 +59,30 @@ enrollments.classid = classes.classid
 // CLASSS 13/09/2019
 
 CREATE TABLE students (
-	studentid varchar(20)			NOT NULL,
-	studentlastname varchar(20)		NOT NULL,
+	studentid varchar(20)		NOT NULL,
+	studentlastname varchar(20)	NOT NULL,
 	studentfirstname varchar(20)	NOT NULL,
 	programgroupname varchar(20)	NOT NULL,
-	term varchar(20)				NOT NULL,
+	term varchar(20)		NOT NULL,
 	PRIMARY KEY (studentid)
 );
 
 
 CREATE TABLE classes (
-	classid varchar(20)			NOT NULL,
-	roomid varchar(20)			NOT NULL,
+	classid varchar(20)		NOT NULL,
+	roomid varchar(20)		NOT NULL,
 	datetimeid varchar(20)		NOT NULL,
 	coursename varchar(20)		NOT NULL,
 	PRIMARY KEY (classid)
 );
 
 CREATE TABLE programgroup (
-	pgid varchar(20)				NOT NULL,
+	pgid varchar(20)		NOT NULL,
 	programgroupname varchar(20)	NOT NULL,
-	sectionid varchar(20)			NOT NULL,
-	classid varchar(20)				NOT NULL,
+	sectionid varchar(20)		NOT NULL,
+	classid varchar(20)		NOT NULL,
 	PRIMARY KEY (pgid)
 );
+
+ALTER TABLE students
+DROP COLUMN term;
