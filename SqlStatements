@@ -112,3 +112,10 @@ UPDATE students
 SET programgroupname = 'CSAT'
 WHERE len(studentlastname) < 5;
 
+///-------------------------- ANALITICS----------
+select Community, avg([Sold Price]), sum([Sold Price]), 
+min([Sold Price]), max([Sold Price]) 
+from thisyear
+group by Community;
+
+
