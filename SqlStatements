@@ -76,4 +76,10 @@ CREATE TABLE classes (
 	PRIMARY KEY (classid)
 );
 
-
+CREATE TABLE programgroup (
+	pgid varchar(20)				NOT NULL,
+	programgroupname varchar(20)	NOT NULL,
+	sectionid varchar(20)			NOT NULL,
+	classid varchar(20)				NOT NULL,
+	PRIMARY KEY (pgid)
+);
