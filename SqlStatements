@@ -86,3 +86,36 @@ CREATE TABLE programgroup (
 
 ALTER TABLE students
 DROP COLUMN term;
+
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A101', 'Smith', 'Mary', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A102', 'Jones', 'Cindy', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A103', 'Pike', 'Christoph', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A104', 'McCoy', 'Leonard', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A105', 'Scott', 'Montgommer', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A106', 'Archer', 'Jonathan', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A107', 'Reacher', 'Jack', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A108', 'Caidin', 'Martin', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A109', 'Goldman', 'Oscar', 'CPCT');
+
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroupname)
+VALUES ('A110', 'Austin', 'Steve', 'CPCT');
+
+SELECT * FROM students;
