@@ -119,3 +119,10 @@ INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup
 VALUES ('A110', 'Austin', 'Steve', 'CPCT');
 
 SELECT * FROM students;
+
+INSERT INTO classes (classid, roomid, datetimeid, coursename)
+VALUES ('1', 'A101', '1', 'JAVA');
+
+INSERT INTO programgroup (pgid, programgroupname, sectionid, classid)
+VALUES ('1', 'CPCT', '1', '1');
+
