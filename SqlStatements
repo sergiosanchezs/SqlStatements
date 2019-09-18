@@ -56,7 +56,7 @@ where students.studentid = enrollments.studentid and
 
 enrollments.classid = classes.classid
 
-// CLASSS 13/09/2019
+//######################### CLASSS 13/09/2019 #######################################
 
 CREATE TABLE students (
 	studentid varchar(20)		NOT NULL,
@@ -118,4 +118,19 @@ min([Sold Price]), max([Sold Price])
 from thisyear
 group by Community;
 
+//######################### CLASSS 18/09/2019 #######################################
 
+CREATE TABLE veggies (
+	veggie_id VARCHAR(20),
+	cost MONEY,
+	veggie_name VARCHAR(20),
+	quantity INT,
+	PRIMARY KEY (veggie_id)
+);
+
+CREATE TABLE lot (
+    lot_id VARCHAR(20),
+    veggie_id VARCHAR(20),
+    lot_name VARCHAR(20),
+    PRIMARY KEY (lot_id)
+);
