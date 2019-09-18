@@ -134,3 +134,37 @@ CREATE TABLE lot (
     lot_name VARCHAR(20),
     PRIMARY KEY (lot_id)
 );
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V1', '0.97','Carrot', '45');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V2', '0.92','Spinach', '15');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V3', '0.56','Cauliflower', '45');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V4', '4.97','Broccoli', '8');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V5', '1.55','Artichokes', '32');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V6', '2.19','Eggplant', '27');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V7', '5.92','Asparagus', '87');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V8', '3.52','Cabbage', '35');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V9', '1.23','Peas', '54');
+
+INSERT INTO veggies (veggie_id, cost, veggie_name, quantity)
+VALUES ('V10', '2.09','Beans', '60');
+
+SELECT * FROM veggies
+
+http://theprof.ca/abcd
