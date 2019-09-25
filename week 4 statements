@@ -38,6 +38,9 @@ CREATE TABLE orders (
 INSERT INTO orders (orderId, orderNumber, itemNumber)
 VALUES ('1', '0001' , '2');
 
+// ASSINGMENT
+select SUM(item_price *  quantity_in_stocks) AS total_items_cost from warehouse;
+
 INSERT INTO orders (orderId, orderNumber, itemNumber)
 VALUES ('2', '0001' , '1');
 
