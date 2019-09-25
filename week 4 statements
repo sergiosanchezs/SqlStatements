@@ -51,3 +51,70 @@ VALUES ('4', '0002' , '2');
 SELECT truck.orderNumber, truck.truckNumber, truck.driverName, warehouse.itemDescription
 FROM warehouse, truck, orders
 WHERE truck.orderNumber = orders.orderNumber AND orders.itemNumber = warehouse.itemNumber
+
+//-----------------------------------------------------
+
+CREATE TABLE warehouse (
+    item_number VARCHAR(20),
+	item_description VARCHAR(100),
+    shelve_number VARCHAR(20),
+	quantity_in_stocks INT,
+    PRIMARY KEY (item_number)
+);
+
+ALTER TABLE warehouse
+ADD item_price money;
+
+INSERT INTO warehouse (item_number, item_description, shelve_number, item_price) 
+VALUES ('A101' , 'Microwave',  'B114', 100);
+
+UPDATE warehouse
+SET quantity_in_stocks = 14
+WHERE item_number = 'A101'
+
+INSERT INTO warehouse (item_number, item_description, shelve_number, quantity_in_stocks, item_price) 
+VALUES ('A102' , 'Radio',  'B115', 9, 34);
+
+INSERT INTO warehouse (item_number, item_description, shelve_number, quantity_in_stocks, item_price) 
+VALUES ('A103' , 'Cellphone',  'B115', 17, 359);
+
+INSERT INTO warehouse (item_number, item_description, shelve_number, quantity_in_stocks, item_price) 
+VALUES ('A104' , 'paint can',  'B105', 21, 25);
+
+INSERT INTO warehouse (item_number, item_description, shelve_number, quantity_in_stocks, item_price) 
+VALUES ('A105' , 'USB',  'B109', 32, 10);
+
+
+CREATE TABLE truck (
+    truck_number VARCHAR(20),
+	driver_name VARCHAR(100),
+    order_number VARCHAR(20),
+    PRIMARY KEY (truck_number)
+);
+
+INSERT INTO truck (truck_number, driver_name, order_number) 
+VALUES ('TTK01', 'Joe',  '079');
+
+INSERT INTO truck (truck_number, driver_name, order_number) 
+VALUES ('TTK02', 'Bill',  '053');
+
+INSERT INTO truck (truck_number, driver_name, order_number) 
+VALUES ('TTK03', 'Larry',  '017');
+
+INSERT INTO truck (truck_number, driver_name, order_number) 
+VALUES ('TTK04', 'Moe',  '089');
+
+CREATE TABLE orders (
+	order_id VARCHAR(20),
+    item_number VARCHAR(20),
+	truck_number VARCHAR(20),
+    PRIMARY KEY (order_id)
+);
+
+INSERT INTO orders (order_id, item_number, truck_number)
+VALUES ('1', 'A101', 'TTK03');
+
+SELECT *
+FROM truck AS t, warehouse AS w, orders AS o
+WHERE w.item_number = o.item_number AND 
+t.truck_number = o.truck_number
