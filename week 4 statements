@@ -1,0 +1,53 @@
+CREATE TABLE warehouse (
+    itemNumber VARCHAR(20),
+	itemDescription VARCHAR(100),
+    shelveNumber VARCHAR(20),
+	quantityStocks INT,
+    PRIMARY KEY (itemNumber)
+);
+
+INSERT INTO warehouse (itemNumber, itemDescription, shelveNumber, quantityStocks) 
+VALUES ('1' , 'apple',  '4', 34);
+
+INSERT INTO warehouse (itemNumber, itemDescription, shelveNumber, quantityStocks)
+VALUES ('2' , 'pear',  '3', 23);
+
+INSERT INTO warehouse (itemNumber, itemDescription, shelveNumber, quantityStocks)
+VALUES ('3' , 'tangerine',  '2', 65);
+
+CREATE TABLE truck (
+    truckNumber VARCHAR(20),
+	driverName VARCHAR(100),
+    orderNumber VARCHAR(20),
+    PRIMARY KEY (truckNumber)
+);
+
+INSERT INTO truck (truckNumber, driverName, orderNumber)
+VALUES ('ABC1' , 'Peter',  '0001');
+
+INSERT INTO truck (truckNumber, driverName, orderNumber)
+VALUES ('EFD1' , 'Lovish',  '0002');
+
+CREATE TABLE orders (
+	orderId VARCHAR(20),
+    orderNumber VARCHAR(20),
+	itemNumber VARCHAR(100),
+    PRIMARY KEY (orderId)
+);
+
+INSERT INTO orders (orderId, orderNumber, itemNumber)
+VALUES ('1', '0001' , '2');
+
+INSERT INTO orders (orderId, orderNumber, itemNumber)
+VALUES ('2', '0001' , '1');
+
+INSERT INTO orders (orderId, orderNumber, itemNumber)
+VALUES ('3', '0002' , '3');
+
+INSERT INTO orders (orderId, orderNumber, itemNumber)
+VALUES ('4', '0002' , '2');
+
+
+SELECT truck.orderNumber, truck.truckNumber, truck.driverName, warehouse.itemDescription
+FROM warehouse, truck, orders
+WHERE truck.orderNumber = orders.orderNumber AND orders.itemNumber = warehouse.itemNumber
